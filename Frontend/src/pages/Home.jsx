@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 import useAuthRedirect from "../hooks/useAuthRedirect";
+import generateUserId from "../utils/userid.util.js";
 
 import { FaGithub } from "react-icons/fa";
 import { HiOutlineChatBubbleBottomCenterText } from "react-icons/hi2";
@@ -19,8 +20,10 @@ const Home = () => {
       return;
     }
 
+    const userId = generateUserId();
+
     //set user to localstorage
-    localStorage.setItem("user", JSON.stringify({ name: username }));
+    localStorage.setItem("user", JSON.stringify({ name: username, userId }));
 
     navigate("/chat");
   };
@@ -54,7 +57,7 @@ const Home = () => {
 
           <input
             type="text"
-            placeholder="Enter your username"
+            placeholder="Enter a username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             className="w-full max-w-md p-4 sm:p-5 border-2 border-indigo-300 rounded-md mb-4 focus:outline-none focus:border-0 focus:ring-2 focus:ring-indigo-500 text-base sm:text-lg"
@@ -68,7 +71,7 @@ const Home = () => {
             <HiOutlineChatBubbleBottomCenterText className="text-2xl sm:text-3xl" />
           </button>
           <footer className="absolute -bottom-5 text-xs sm:text-base font-semibold text-blue-800">
-            © 2025 Text.
+            Text - Your Privacy Our priority.
           </footer>
         </div>
       </div>
