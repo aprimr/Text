@@ -70,6 +70,7 @@ const Chat = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("user");
+    toast.success("Logout successful");
     navigate("/");
   };
 

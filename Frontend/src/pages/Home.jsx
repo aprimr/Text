@@ -25,6 +25,8 @@ const Home = () => {
     //set user to localstorage
     localStorage.setItem("user", JSON.stringify({ name: username, userId }));
 
+    toast.success("Login Successful");
+
     navigate("/chat");
   };
 
