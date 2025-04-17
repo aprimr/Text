@@ -124,7 +124,7 @@ const Chat = () => {
                       isSent
                         ? "bg-blue-600 text-white rounded-tr-none"
                         : "bg-blue-200 text-black rounded-tl-none"
-                    } p-3 rounded-xl max-w-xs sm:max-w-md`}
+                    } p-3 rounded-xl max-w-xs sm:max-w-md break-words`}
                   >
                     {msg.content}
                   </div>
