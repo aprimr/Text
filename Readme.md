@@ -5,7 +5,7 @@ A clean and minimal **public chat room** built with **React**, **TailwindCSS**, 
 No sign-up. No login. No tracking.  
 Just enter a name — and start chatting.
 
-**Live Demo**: [https://text05.netlify.app](https://text05.netlify.app)
+**Live Demo**: [https://text5.netlify.app](https://text5.netlify.app)
 
 ---
 
