@@ -43,7 +43,7 @@ const Home = () => {
           {/* GitHub */}
           <div className="absolute top-4 right-6 flex items-center text-blue-600 text-xl sm:text-2xl">
             <a
-              href="https://github.com/aprimr"
+              href="https://github.com/aprimr/Text"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-800 transition"
@@ -62,6 +62,11 @@ const Home = () => {
             placeholder="Enter a username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleJoin();
+              }
+            }}
             className="w-full max-w-md p-4 sm:p-5 border-2 border-indigo-300 rounded-md mb-4 focus:outline-none focus:border-0 focus:ring-2 focus:ring-indigo-500 text-base sm:text-lg"
           />
 

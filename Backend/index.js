@@ -25,8 +25,8 @@ app.use(express.json());
 connectDb();
 
 // Routes
-app.get("/", (req, res) => {
-  res.send("Hello Text!");
+app.get("/keep-alive", (req, res) => {
+  res.send("Hello Text! I am active.");
 });
 
 // Start Server
